@@ -1,0 +1,71 @@
+/*@import "colors.less";*/
+
+ /********** org chart   *******/
+.node {
+   cursor:default;
+}
+.node text {
+    font: 14px sans-serif;
+    fill: @light1;
+    font-weight: bold;
+}
+
+.node rect {
+
+}
+
+/* Lines */
+.link {
+  fill: none;
+  stroke: @accent1;
+  stroke-width: 3.5px;
+}
+
+
+
+
+.box{
+	stroke :@accent1;
+	stroke-width: 4;
+	fill: @accent1;
+}
+/************  mind mapping  ***********/
+.level0 rect {
+        cursor: pointer;
+        fill: @accent1;
+        stroke: @accent1;
+        stroke-width: 2px;
+      }
+
+      .level0 text {
+      font: 14px sans-serif;
+            fill: @light1;
+    font-weight: bold;
+      }
+
+
+      .level1 rect {
+        cursor: pointer;
+        fill: @light1;
+        stroke: @accent1;
+        stroke-width: 2px;
+      }
+
+   .level2 rect {
+        cursor: pointer;
+        fill: @light1;
+        stroke: @light1;
+        stroke-width: 2px;
+      }
+      .level1 text, .level2 text {
+      font: 14px sans-serif;
+            fill: @accent1;
+    font-weight: bold;
+      }
+
+      path.link {
+      fill: none;
+      stroke: @accent1;
+      stroke-width: 2px;
+      }
+     

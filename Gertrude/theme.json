@@ -1,0 +1,157 @@
+{
+    "Name": "Gertrude",
+    "Version": 0.1,
+    "Author": "Neomobili / SlideCarnival",
+    "Description": "Port of the Gertrude theme from SlideCarnival",
+    "Palets": [
+        {
+            "Name": "Default Palet",
+            "Css": "default-palet.css",
+            "Dark1" : "#000000",
+            "Light1" : "#ffffff",
+            "Dark2" : "#666666",
+            "Light2" : "#dddddd",
+            "Accent1" : "#DD3556",
+            "Accent2" : "#E36151",
+            "Accent3" : "#B7ACA1"
+        }
+    ],
+    "Layouts":[
+       {
+           "Name" : "Title",
+           "Group" :"Basic",
+           "Snippet": "# Blank slide",
+           "Classes": "title aligncenter bg-light",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 1,
+           "Template": " <div><div class=\"onepxframe\"><div class=\"titleframe\">{@{content}@}</div></div> </div>",
+           "Icon" :""
+       },
+       {
+           "Name" : "LeftImage1Column",
+           "Group" :"Basic",
+           "Snippet": "# Blank slide",
+           "Classes": "LeftImage1Column aligncenter bg-light",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 2,
+           "Template": "<div class=\"grid fullheightgrid\"><div class=\"column coverimg\">{@{content}@}<div class=\"overimage\"><div class=\"onepxframe\"><div class=\"bigslidenumber\">{{SLIDE_NUMBER}}</div></div></div></div><div class=\"column\"> {@{content}@}</div></div>",
+           "Icon" :""
+       },
+
+       {
+           "Name" : "BlankDark",
+           "Group" :"Basic",
+           "Snippet": "# Blank dark slide",
+           "Classes": "blank-dark bg-dark aligncenter",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 2,
+           "Template": "<div class=\"blankinside\"><div class=\"roundtopimage\">{@{content}@}</div><div class = \"innercontent\">{@{content}@}</div></div>",
+           "Icon" :""
+       },
+
+
+       {
+           "Name" : "HeaderAndColumns",
+           "Group" :"Basic",
+           "Snippet": "# Blank slide",
+           "Classes": "aligncenter",
+           "Dynamic": true,
+           "FixedParts": 1,
+           "DynamicPart" :"<div class=\"column\"> {@{content}@} </div>",
+           "Template": "<div class=\"wrap\"> {@{content}@}  <div class=\"grid\">{@{dynamic}@}</div></div>",
+           "Icon" :""
+       },
+       {
+           "Name" : "Steps",
+           "Group" :"Basic",
+           "Snippet": "",
+           "Classes": "aligncenter",
+           "Dynamic": true,
+           "FixedParts": 1,
+           "DynamicPart" :"<li> {@{content}@} </li>",
+           "Template": "<div class=\"wrap\"> {@{content}@}  <ul class=\"flexblock steps\">{@{dynamic}@}</ul></div>",
+           "Icon" :""
+       },
+       {
+           "Name" : "Portfolio",
+           "Group" :"Basic",
+           "Snippet": "# ",
+           "Classes": "aligncenter",
+           "Dynamic": true,
+           "FixedParts": 1,
+           "DynamicPart" :"<li> {@{content}@} </li>",
+           "Template": "<div class=\"wrap\"> {@{content}@}  <ul class=\"flexblock gallery\">{@{dynamic}@}</ul></div>",
+           "Icon" :""
+       },
+       {
+           "Name" : "Team",
+           "Group" :"Basic",
+           "Snippet": "# ",
+           "Classes": "aligncenter",
+           "Dynamic": true,
+           "FixedParts": 1,
+           "DynamicPart" :"<li> {@{content}@} </li>",
+           "Template": "<div class=\"wrap\"> {@{content}@}  <ul class=\"flexblock team\">{@{dynamic}@}</ul></div>",
+           "Icon" :""
+       },
+       {
+           "Name" : "Specs",
+           "Group" :"Basic",
+           "Snippet": "# ",
+           "Classes": "aligncenter",
+           "Dynamic": true,
+           "FixedParts": 1,
+           "DynamicPart" :"<li class=\"specs\"> {@{content}@} </li>",
+           "Template": "<div class=\"wrap\"> {@{content}@}  <ul class=\"flexblock\">{@{dynamic}@}</ul></div>",
+           "Icon" :""
+       },
+       {
+           "Name" : "Card",
+           "Group" :"Basic",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 1,
+           "Snippet": "# Blank slide",
+           "Classes": " card",
+           "Template": " {@{content}@} <div class=\"wrap\"><div class=\"card-50 bg-white\"> {@{content}@} <div class=\"flex-content\">{@{content}@}</div></div>",
+           "Icon" :""
+       },
+       {
+           "Name" : "Cover",
+           "Group" :"Basic",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 1,
+           "Snippet": "# Blank slide",
+           "Classes": "aligncenter cover",
+           "Template": " {@{content}@} ",
+           "Icon" :""
+       },
+       {
+           "Name" : "DarkCover",
+           "Group" :"Basic",
+           "Snippet": "# Blank slide",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 1,
+           "Classes": "aligncenter cover bg-dark",
+           "Template": " {@{content}@} ",
+           "Icon" :""
+       },
+       {
+           "Name" : "2x2-matrix",
+           "Group" :"Matrix",
+           "Classes": "",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 4,
+           "Snippet": "## Top Left Content\n°°°\n## Top Right Content\n°°°\n## Bottom Left Content\n°°°\n## Bottom Right Content",
+           "Template": "<div class=\"grid2x2 matrix\"><div class=\"img-fill quad\">{@{content}@}</div><div class=\"quad\" style=\"background-color:#333D47;\">{@{content}@}</div><div class=\" quad\" style=\"background-color:#FF2744;\">{@{content}@}</div><div class=\"img-fill quad\">{@{content}@}</div></div> ",
+           "Icon" :""
+       }
+    ]
+}
+

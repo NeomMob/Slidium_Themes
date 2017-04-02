@@ -1,0 +1,684 @@
+/*=========================================
+0. CSS Reset & Normalize
+=========================================== */
+.reveal .c3{
+  flex-grow:1;
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, bbbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { border: 0; font-size: 100%; font: inherit; vertical-align: baseline; margin: 0; padding: 0 } 
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary { 
+display: block;
+} 
+body {
+  line-height: 1;
+}
+
+.reveal section{
+  font-size:24px; /* mod AP */
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+
+
+
+
+ul {
+  list-style: square;
+  text-indent: inherit;
+}
+
+ol {
+  list-style: decimal;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+sup,
+sub {
+  font-size: 0.75em;
+  line-height: 2.2em;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: 0.5ex;
+}
+
+small {
+  font-size: 0.75em;
+  line-height: 1.72;
+}
+
+big {
+  font-size: 1.25em;
+}
+
+hr {
+  border: none;
+  clear: both;
+  display: block;
+  height: 1px;
+  width: 100%;
+  text-align: center;
+  margin: 3.2rem auto;
+}
+h2 + hr, h3 + hr {margin-bottom: 4.8rem;
+}
+p + hr {margin-bottom: 4rem;
+}
+
+
+/* added by AP */
+.reveal section > ol,.reveal  section> ul,.reveal .wrap > ol,.reveal  .wrap> ul {
+  margin:0px 0px 0px 70px ;
+  font-size:3 rem;
+}
+
+
+/*
+hr::after {
+    position: relative;
+    top: -2.4rem;
+    font-size: 2.4rem;
+    content: "\00A7";
+    display: inline-block;
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+    line-height: 4.8rem;
+}*/
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+bbbr,
+acronym {
+  cursor: help;
+}
+
+mark,
+ins {
+  text-decoration: none;
+  padding: 0 4px;
+  text-shadow: none;
+  
+}
+
+::-moz-selection {
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  text-shadow: none;
+}
+
+::selection {
+  text-shadow: none;
+}
+
+img {
+  /* Make sure images are scaled correctly. */
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+img:hover {
+  filter: alpha(opacity=9000);
+  opacity: 0.90;
+  filter: alpha(opacity=90);
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+  line-height: 0;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  width: 96%;
+  margin-left:2%!important;//modAP
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 24px;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: "" "";
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}
+
+
+/*=== Clearing === */
+.clear:before, .clear:after, header:before, header:after, main:before, main:after, .wrap:before, .wrap:after, group:before, group:after, section:before, section:after, aside:before, aside:after,footer:before, footer:after{ content: ""; display: table; } 
+.clear:after, header:after, main:after, .wrap:after, group:after, section:after, aside:after, footer:after { clear: both; }
+	
+	/*=== 1.4. Basic Grid (Flexible blocks)
+Auto-fill & Equal height === */
+
+.grid {
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  clear: both;
+}
+
+.grid:before {
+  content: "";
+  display: table;
+}
+
+.grid:after {
+  clear: both;
+}
+
+.grid > .column {
+  position: relative;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex: auto;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: .3s;
+  transition: .3s;   
+  padding: 2.4rem;
+}
+
+.grid.vertical-align .column {
+  justify-content: center;
+}
+
+/*@media (min-width:768px) {*/
+  .grid > .column {
+    width: 25%;
+  }
+  /* Grid (Sidebar + Main) .grid.sm */
+  .grid.sm .column:nth-child(1) {
+   width: 30%
+  }
+  .grid.sm .column:nth-child(2) {
+   width: 70%;
+  }
+  /* Grid (Main + Sidebar) .grid.ms */
+  .grid.ms .column:nth-child(1) {
+   width: 70%
+  }
+  .grid.ms .column:nth-child(2) {
+   width: 30%;
+  }
+   /* Grid (Sidebar + Main + Sidebar) .grid.sms */
+  .grid.sms .column:nth-child(2) {
+   width: 50%;
+  }
+  
+  /**************************** HEADERS ****************************/
+  .reveal h1,  .reveal h2,  .reveal h3 , .reveal h4,  .reveal h5,  .reveal h6{
+	  text-align: center;
+  }
+  .reveal  h1 {
+    font-size: 5.6rem;
+    line-height: 2.2rem;
+		font-size: 28px;
+	font-weight:bold;
+	text-transform: uppercase;
+  }
+  .reveal h2 {
+    font-size: 24px;
+    line-height: 2.4rem;
+  }
+ .reveal  h3 {
+    font-size: 22px;
+    line-height: 5.6rem;
+  }
+  .reveal h4 {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+  
+  /*===============================================================
+6. Magic blocks with flexbox (Auto-fill & Equal Height) 
+Blocks Links li>a = .flexblock.blink (.blink required)
+================================================================= */
+
+.flexblock {
+  margin-right: auto!important; /*!modap*/
+  margin-left: auto!important;/*!modap*/
+  padding: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  clear: both;
+}
+
+.flexblock:before {
+  content: "";
+  display: table;
+}
+
+.flexblock:after {
+  clear: both;
+}
+
+.flexblock li,
+.flexblock.blink li>a {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  /*making paragraphs and linked block*/
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  padding: 2.4rem;
+
+}
+
+.flexblock li {
+  flex: auto;
+  text-align: left;
+  /*float: left;*/
+  width: 100%;/* more control */
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+/*.flexblock li:hover{
+-webkit-transform: translateY(-.2rem);
+transform: translateY(-.2rem);
+}*/
+.flexblock.aligncenter li {text-align: center;}
+
+.flexblock.vertical-align li {
+  justify-content: center;
+}
+
+.flexblock.blink li {
+  padding: 0;
+}
+
+
+
+/*@media (min-width:600px) {*/
+  .flexblock li {
+    width: 50%;
+  }
+/*}*/
+
+/*@media (min-width:1024px) {*/
+  .flexblock li {
+    width: 25%;
+  }
+/*}*/
+
+h1 + .flexblock,
+h2 + .flexblock,
+h3 + .flexblock,
+div + ul, div + ol{
+  margin-top: 3.2rem;
+}
+
+.flexblock li h2,
+.flexblock li h3,footer .column h2,footer .column h3 {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+}
+
+/*=== Section = Slide === */
+
+section,.slide
+{
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  /*Fixed/Visible header? padding-top: 12rem; */
+  padding: 2.4rem;
+  word-wrap: break-word;
+  page-break-after: always;
+  min-height: 100vh; /*Fullscreen*/
+  /* Prototyping? min-height: 720px (Baseline: 8px = .8rem)*/
+}
+
+@import "colors.less";
+@import "charts.less";
+@import "diagrams.less";
+/************************* THEME Specific ********/
+.reveal{
+	font-family:Arial;
+}
+.reveal p{
+	color: #576574;
+}
+
+.reveal .title .onepxframe{
+  width:340px;
+}
+
+.reveal .onepxframe {
+	border: 1px solid #fff;
+	margin:auto;
+}
+
+
+.reveal .titleframe{
+	background-color:#fff;
+	margin:10px;
+	width: 320px;
+	height: 320px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.reveal .titleframe h1{
+	line-height: 2.2 rem;
+}
+
+.reveal .titleframe h2{
+	font-size: 20px;
+	font-weight:bold;
+	color: #576574;
+	line-height: 2.2 rem;
+}
+
+/**** **/
+.reveal .fullheightgrid{
+	height:100%
+}
+
+.reveal .coverimg{
+		padding:0px;
+}
+
+.reveal .coverimg img{
+	object-fit: cover;
+	height: 100%;
+}
+
+.reveal .overimage{
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reveal .overimage .onepxframe{
+  width:200px;
+  height: 300px;
+}
+
+.reveal .bigslidenumber{
+	/*margin: 100px 80px;*/
+  text-align:center;
+	
+	font-size:92px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: georgia;
+  /*width:200px;*/
+}
+
+.reveal .bg-dark .bigslidenumber, .reveal .columns .bigslidenumber{
+    color: #fff;
+  }
+
+.reveal .quotemark{
+    text-align:center;
+	font-size:192px;
+    font-family: georgia;
+  }
+.reveal .quote{
+  color: #1d1d1d;
+}
+
+.reveal .quote .innercontent{
+   text-align:center;
+ }
+
+ .reveal .quote blockquote p{
+   text-align: center;
+  font-size: 44px;
+ }
+
+/****** ***/
+.reveal .backgrounds .blank-dark{
+  background:#1d1d1b;
+}
+
+.reveal .blankinside{
+	
+	margin:auto;
+	width: 70%;
+	height: 60%;
+}
+
+.reveal .bg-dark .blankinside{
+  border: 1px solid #fff;
+}
+
+.reveal .bg-light .blankinside{
+  border: 1px solid #1d1d1d;
+}
+
+.reveal .blankinside .innercontent{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 350px;
+}
+
+.svgicon{
+	width:100px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.reveal .roundtopimage{
+	margin-top: -65px;
+	width:130px;
+	height:130px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.reveal .roundtopimage img{
+	border-radius: 50%;
+	/*border: 8px solid #1d1d1b;*/
+}
+
+/****** ***/
+.reveal .subtitle .subtitleinside{
+	/*border: 1px solid #fff;*/
+	background-color:rgba(0, 0, 0, 0.6);
+	margin:auto;
+	width: 70%;
+	height: 60%;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.reveal .subtitleinside .innercontent{
+	
+	/*height: calc(100% - 70px);*/
+}
+
+/********* iphone  *****/
+
+.reveal .iphone .innercontent{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right:250px;
+	height: calc(100% - 10px);
+}
+
+
+.reveal .iphoneframe{
+  position: absolute;
+  right: 180px;
+  bottom: 120px;
+  background: url(iphone.svg)  no-repeat;
+  height: 464px;
+  width: 221px;
+}
+
+.reveal .iphonescreen{
+  background-color:#000;
+  height: 335px;
+  width: 191px;
+  top: 66px;
+  position: relative;
+  left: 17px
+}
+
+
+.reveal .macbookframe{
+  position: absolute;
+  left: 109px;
+  top: 144px;
+  background: url(macbook.svg) no-repeat;
+  height: 464px;
+  width: 741px;
+}
+
+.reveal .macbookscreen{
+  background-color:#000;
+height: 310px;
+width: 531px;
+top: 45px;
+position: relative;
+left: 104px;
+}
+
+.reveal .topcontents{
+  position: absolute;
+width: 100%;
+top: 0px;
+}
+
+
+.reveal .bottomcontents{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
